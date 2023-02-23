@@ -8,10 +8,10 @@
 
 <!-- 九宫格区域 -->
 <view class="grid-list">
-    <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+    <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/shoplist/shoplist?id={{item.id}}&title={{item.name}}">
         <image src="{{item.icon}}"/>
         <text>{{item.name}}</text>
-    </view>
+    </navigator>
 </view>
 
 <!-- 图片区域 -->
@@ -19,3 +19,5 @@
     <image src="/images/link-01.png" mode="widthFix"/>
     <image src="/images/link-02.png" mode="widthFix"/>
 </view>
+
+//https://applet-base-api-t.itheima.net 地址换这一个后缀不变，记得修改合法域名
